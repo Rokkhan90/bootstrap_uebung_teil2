@@ -1,19 +1,41 @@
-.navbar-nav .nav-link {
-    color: lightgray !important;
+.tooltip-link {
+    position: relative;
 }
 
-footer {
+.tooltip-link:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: -30px; 
+    left: 100%; 
+    transform: translateX(10px); 
     background-color: #343a40;
-    color: lightgray;
-    text-align: center;
-    padding: 10px 0;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    font-size: 0.875rem;
+    z-index: 10;
+    opacity: 1;
+    visibility: visible;
 }
 
-.carousel-caption {
-    bottom: 20px;
+.tooltip-link:hover::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 100%; 
+    transform: translateX(10px);
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent #343a40;
+    z-index: 10;
+    opacity: 1;
+    visibility: visible;
 }
 
-.carousel-caption h5,
-.carousel-caption p {
-    color: #FFA500 !important;
+.tooltip-link::after,
+.tooltip-link::before {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease-in-out;
 }
