@@ -1,0 +1,19 @@
+.navbar-nav .nav-link {
+    color: lightgray !important;
+}
+
+footer {
+    background-color: #343a40;
+    color: lightgray;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.carousel-caption {
+    bottom: 20px;
+}
+
+.carousel-caption h5,
+.carousel-caption p {
+    color: #FFA500 !important;
+}
