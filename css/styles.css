@@ -39,3 +39,8 @@
     visibility: hidden;
     transition: opacity 0.2s ease-in-out;
 }
+
+.carousel-caption h5,
+.carousel-caption p {
+    color: #FFA500 !important;
+}
